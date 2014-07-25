@@ -31,14 +31,9 @@ namespace BlueWombat.SqlLib
 
         private static void GetMatchesAndGroups_FillRow(object obj, out SqlString match, out SqlString group)
         {
-            //var m = obj as dynamic;
-            //match = m.Match;
-            //group = m.Group;
             var m = obj as string[];
             match = m[0];
             group = m[1];
-            //match = null;
-            //group = null;
         }
     }
 }

@@ -56,8 +56,12 @@
     <Content Include="EnableCLRExecution.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Pure Sql Functions\BW_CALCAGE.sql" />
-    <Content Include="Pure Sql Functions\BW_STRINGSPLIT.txt" />
+    <Content Include="Pure Sql Functions\BW_CALCAGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pure Sql Functions\BW_STRINGSPLIT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
