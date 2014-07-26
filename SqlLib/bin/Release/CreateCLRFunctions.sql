@@ -30,6 +30,22 @@ CREATE FUNCTION BW_REGEXISMATCH
 RETURNS bit
 AS EXTERNAL NAME [BlueWombat.SqlLib].[BlueWombat.SqlLib.Regex].IsMatch
 go
+DROP FUNCTION BW_REGEXREPLACE
+go
+-- =======================================================================================================
+-- Author:		BlueWombat (http://bluewombat.com)
+-- Create date: 26-07-2014
+-- Description:	Lets you make replacements on the string you're matching your regular expression against
+-- =======================================================================================================
+CREATE FUNCTION BW_REGEXREPLACE
+(
+	@expr nvarchar(max),
+	@stringToMatch nvarchar(max),
+	@replacement nvarchar(max)
+)
+RETURNS nvarchar(max)
+AS EXTERNAL NAME [BlueWombat.SqlLib].[BlueWombat.SqlLib.Regex].Replace
+go
 DROP FUNCTION BW_REGEXGETMATCHESANDGROUPS
 go
 -- ==================================================================================================================================

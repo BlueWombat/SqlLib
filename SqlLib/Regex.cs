@@ -17,6 +17,13 @@ namespace BlueWombat.SqlLib
             return r.IsMatch(valueToMatch.ToString());
         }
 
+        [SqlFunction(Name = "BW_REGEXREPLACE", IsDeterministic = false, SystemDataAccess = SystemDataAccessKind.None, DataAccess = DataAccessKind.None)]
+        public static SqlString Replace(SqlString expr, SqlString valueToMatch, SqlString replacement)
+        {
+            var r = new RegexLib(expr.ToString(), RegexOptions.Singleline);
+            return new SqlString(r.Replace(valueToMatch.ToString(), replacement.ToString()));
+        }
+
         [SqlFunction(Name = "BW_REGEXGETMATCHESANDGROUPS", TableDefinition = "Match nvarchar(max), Group nvarchar(max)", FillRowMethodName = "GetMatchesAndGroups_FillRow",
             IsDeterministic = false, SystemDataAccess = SystemDataAccessKind.None, DataAccess = DataAccessKind.None)]
         public static IEnumerable GetMatchesAndGroups(SqlString expr, SqlString valueToMatch)
