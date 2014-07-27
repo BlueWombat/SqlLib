@@ -59,6 +59,12 @@
     <Content Include="Pure Sql Functions\BW_CALCAGE.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pure Sql Functions\BW_DATETIMETOEPOCH.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pure Sql Functions\BW_EPOCHTODATETIME.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pure Sql Functions\BW_STRINGSPLIT.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

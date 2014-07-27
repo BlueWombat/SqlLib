@@ -1,4 +1,8 @@
-﻿-- ======================================================================================
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- ======================================================================================
 -- Author:		BlueWombat (http://bluewombat.com)
 -- Create date: 25-07-2014
 -- Description:	Provides a simple split implementation and thereby pseudo array support

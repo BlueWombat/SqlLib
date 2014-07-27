@@ -1,4 +1,8 @@
-﻿-- ===============================================================================
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- ===============================================================================
 -- Author:		BlueWombat (http://bluewombat.com)
 -- Create date: 25-07-2014
 -- Description:	A nice little helper method to calculate age based on birth date

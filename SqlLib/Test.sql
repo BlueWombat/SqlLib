@@ -7,3 +7,13 @@
 select * from dbo.BW_STRINGSPLIT('value 1|split|value 2|split|value 3|split|value 4', '|split|')
 
 select * from dbo.BW_REGEXGETMATCHESANDGROUPS('need to (capture)', 'I have this text where I need to capture something. but the word caputre is mentioned twice!')
+
+declare
+	@date datetime = '2013-01-24 08:36:50.667',
+	@epoch bigint = 0
+	
+select @epoch = dbo.BW_DATETIMETOEPOCH(@date)
+
+select @epoch
+
+select dbo.BW_EPOCHTODATETIME(@epoch)
