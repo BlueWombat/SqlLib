@@ -1,12 +1,17 @@
 ﻿DROP FUNCTION BW_HMACHASHSTRING
 go
--- =================================================================================================================================
+SET ANSI_NULLS ON
+go
+SET QUOTED_IDENTIFIER ON
+go
+-- =====================================================================================================================================================================================
 -- Author:		BlueWombat (http://bluewombat.com)
 -- Create date: 25-07-2014
--- Description:	Lets you calculate HMACs, supported algorithms are 'HMACMD5', 'HMACSHA1', 'HMACSHA256', 'HMACSHA384', 'HMACSHA512'
--- =================================================================================================================================
+-- Description:	Lets you calculate HMACs, supported algorithms are 'HMACMD5', 'HMACSHA1', 'HMACSHA256', 'HMACSHA384', 'HMACSHA512' and supported output formats are 'HEX' and 'BASE64'
+-- =====================================================================================================================================================================================
 CREATE FUNCTION BW_HMACHASHSTRING
 (
+	@outputFormat nvarchar(10),
 	@algo nvarchar(10),
 	@salt nvarchar(max),
 	@stringToHash nvarchar(max)
@@ -16,6 +21,10 @@ AS EXTERNAL NAME [BlueWombat.SqlLib].[BlueWombat.SqlLib.HMAC].HashString
 
 go
 DROP FUNCTION BW_REGEXISMATCH
+go
+SET ANSI_NULLS ON
+go
+SET QUOTED_IDENTIFIER ON
 go
 -- =======================================================================================================================================================================
 -- Author:		BlueWombat (http://bluewombat.com)
@@ -32,6 +41,10 @@ AS EXTERNAL NAME [BlueWombat.SqlLib].[BlueWombat.SqlLib.Regex].IsMatch
 go
 DROP FUNCTION BW_REGEXREPLACE
 go
+SET ANSI_NULLS ON
+go
+SET QUOTED_IDENTIFIER ON
+go
 -- =======================================================================================================
 -- Author:		BlueWombat (http://bluewombat.com)
 -- Create date: 26-07-2014
@@ -47,6 +60,10 @@ RETURNS nvarchar(max)
 AS EXTERNAL NAME [BlueWombat.SqlLib].[BlueWombat.SqlLib.Regex].Replace
 go
 DROP FUNCTION BW_REGEXGETMATCHESANDGROUPS
+go
+SET ANSI_NULLS ON
+go
+SET QUOTED_IDENTIFIER ON
 go
 -- ==================================================================================================================================
 -- Author:		BlueWombat (http://bluewombat.com)

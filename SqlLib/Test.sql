@@ -1,6 +1,6 @@
 ﻿select
 	dbo.BW_CALCAGE('1989-08-22') as [CalcAge Test],
-	dbo.BW_HMACHASHSTRING('hmacsha512', 'testKey', 'testVal') as [HMAC HashString Test],
+	dbo.BW_HMACHASHSTRING('base64', 'hmacsha512', 'testKey', 'testVal') as [HMAC HashString Test],
 	dbo.BW_REGEXISMATCH('^This', 'This should match just fine :-)') as [Regex IsMatch Test],
 	dbo.BW_REGEXREPLACE('(?<attr>src|href)="(?<value>[^"]*)"', '<p>Test<img src="/folder/image.png" /></p>', '${attr}="http://test.com${value}"') as [Regex Replace Test]
 
