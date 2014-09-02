@@ -3,6 +3,8 @@ SqlLib
 
 [![Build status](https://ci.appveyor.com/api/projects/status/p1f6lbt452jy9h8v)](https://ci.appveyor.com/project/BlueWombat/sqllib)
 
+You can check the current build status above and also download the latest passing Release build.
+
 A small library I provide free of charge to anyone who might find it useful. Nothing in this library is particularly complex or hard to write, just time consuming; and very handy to have around.
 
 The library is provided under the MIT License, so do with it as you please. I would however request that if you have any ideas for improvements, you either fork -> implement -> send pull request, or shoot me a message, and I'll see if I can implement it for you.
